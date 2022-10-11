@@ -1,14 +1,10 @@
 <?php
 
-$st=pow(2, 10);
-echo $st . "\n";
+$radical=sqrt(379);
+echo "До целых: " . round($radical,0) . "\n";
+echo "До десятых: " . round($radical,1) . "\n";
+echo "До сотых: " . round($radical,2) . "\n";
 
-$radical=sqrt(245);
-echo $radical , "\n";
-
-$array=[4,2,5,19,13,0,10];
-$sum=0;
-foreach ($array as $num){
-	$sum+=pow($num,2);
-}
-echo sqrt($sum) . "\n";
+$value = sqrt(587);
+$array=["floor" => floor($value), "ceil" => ceil($value)];
+print_r($array);
