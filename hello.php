@@ -1,13 +1,28 @@
 <?php
 
-$a = 3;
-$b = 4;
-echo abs($a - $b) . "\n";
-
-$array = [1, 2, -1, -2, 3, -3];
-$newArr = [];
-foreach ($array as $num)
+//задача1
+$dividers = [1];
+$num = 27;
+for ($i = 2; $i <= $num; $i++)
 {
-	$newArr[] = abs($num);
+	if ($num % $i === 0)
+	{
+		$dividers[] = $i;
+	}
 }
-print_r($newArr) . "\n";
+print_r($dividers);
+
+//задача2
+$count = 0;
+$sum = 0;
+$array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+foreach ($array as $value)
+{
+	$sum += $value;
+	$count++;
+	if ($sum > 10)
+	{
+		echo $count . "\n";
+		break;
+	}
+}
