@@ -1,5 +1,10 @@
 <?php
 
-$array = [4, -2, 5, 19, -130, 0, 10];
-echo "min = " . min($array) . "\n";
-echo "max = " . max($array) . "\n";
+echo rand(1, 100) . "\n";
+
+$array = array();
+for ($i = 0; $i < 10; $i++)
+{
+	$array[]=rand(1,100);
+}
+print_r($array);
