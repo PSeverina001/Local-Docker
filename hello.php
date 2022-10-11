@@ -1,10 +1,13 @@
 <?php
 
-echo rand(1, 100) . "\n";
+$a = 3;
+$b = 4;
+echo abs($a - $b) . "\n";
 
-$array = array();
-for ($i = 0; $i < 10; $i++)
+$array = [1, 2, -1, -2, 3, -3];
+$newArr = [];
+foreach ($array as $num)
 {
-	$array[]=rand(1,100);
+	$newArr[] = abs($num);
 }
-print_r($array);
+print_r($newArr) . "\n";
