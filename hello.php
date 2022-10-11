@@ -1,16 +1,14 @@
 <?php
 
-$a=10;
-$b=3;
+$st=pow(2, 10);
+echo $st . "\n";
 
-echo $a%$b . "\n";
+$radical=sqrt(245);
+echo $radical , "\n";
 
-if($a%$b===0)
-{
-	echo "Делится. Рузельтат = " . $a/$b . "\n";
+$array=[4,2,5,19,13,0,10];
+$sum=0;
+foreach ($array as $num){
+	$sum+=pow($num,2);
 }
-else
-{
-	echo "Делится с остатком. Остаток = " . $a%$b . "\n";
-}
-
+echo sqrt($sum) . "\n";
