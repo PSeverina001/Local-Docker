@@ -1,10 +1,15 @@
 <?php
 
-for($i=0;$i<20;$i++)
+function sumElements(array $arr, $index = 0)
 {
-	for($j=0;$j<$i+1;$j++)
+	$sum=$arr[$index];
+	if ($index !== count($arr))
 	{
-		echo 'x';
+		$sum+=sumElements($arr, $index + 1);
 	}
-	echo "\n";
+	return $sum;
 }
+
+$my_array=[1,2,3,4,5,6];
+echo sumElements($my_array)/count($my_array);
+
