@@ -1,7 +1,7 @@
 <?php
 
-$user=["name"=>'poly', "surname"=>'Severina', "patronymic"=>'Vitaliyevna'];
-echo $user['name'] . " " . $user['surname'] . " " . $user['patronymic'] . "\n";
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo "Размер массива = " . count($arr) . "\n";
+echo "Последний элемент массива = " . $arr[count($arr)-1] . "\n";
+echo "Предпоследний элемент массива = ". $arr[count($arr)-2];
 
-$date=["year"=>"2022", "month"=>"10", "day"=>"14"];
-echo $date['year'] . "-" . $date['month'] . "-" . $date['day'] . "\n";
