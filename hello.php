@@ -1,12 +1,5 @@
 <?php
 
-$arr = [[]];
-$dimension=3;
-for ($i = 0; $i < $dimension; $i++)
-{
-	for ($j = 0; $j < $dimension; $j++)
-	{
-		$arr[$i][$j]=$i*$dimension+$j+1;
-	}
-}
-print_r($arr);
+$arr = [2, 5, 3, 9];
+$result = $arr[0] * $arr[1] + $arr[2] * $arr[3];
+echo $result;
