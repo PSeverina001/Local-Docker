@@ -1,12 +1,12 @@
 <?php
 
-$arr = [[1, 2, 3], [4, 5], [6]];
-$sum=0;
-for ($i = 0; $i < count($arr); $i++)
+$arr = [[]];
+$dimension=3;
+for ($i = 0; $i < $dimension; $i++)
 {
-	for ($j = 0; $j < count($arr[$i]); $j++)
+	for ($j = 0; $j < $dimension; $j++)
 	{
-		$sum+=$arr[$i][$j];
+		$arr[$i][$j]=$i*$dimension+$j+1;
 	}
 }
-echo $sum;
+print_r($arr);
