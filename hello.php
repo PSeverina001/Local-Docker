@@ -1,5 +1,7 @@
 <?php
 
-$arr = [2, 5, 3, 9];
-$result = $arr[0] * $arr[1] + $arr[2] * $arr[3];
-echo $result;
+$user=["name"=>'poly', "surname"=>'Severina', "patronymic"=>'Vitaliyevna'];
+echo $user['name'] . " " . $user['surname'] . " " . $user['patronymic'] . "\n";
+
+$date=["year"=>"2022", "month"=>"10", "day"=>"14"];
+echo $date['year'] . "-" . $date['month'] . "-" . $date['day'] . "\n";
