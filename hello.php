@@ -1,14 +1,5 @@
 <?php
 
-function sumFrom1to100($start=1, $end = 100)
-{
-	$sum = $start;
-	if ($start !== $end)
-	{
-		$sum += sumFrom1to100($start+1, $end);
-	}
-	return $sum;
-}
-
-echo sumFrom1to100();
-
+$arr = [1, 2, 3, 4, 5, 6, 7];
+$result = array_map('sqrt', $arr);
+print_r($result);
