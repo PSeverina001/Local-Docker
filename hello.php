@@ -1,15 +1,14 @@
 <?php
 
-function sumElements(array $arr, $index = 0)
+function sumFrom1to100($start=1, $end = 100)
 {
-	$sum=$arr[$index];
-	if ($index !== count($arr))
+	$sum = $start;
+	if ($start !== $end)
 	{
-		$sum+=sumElements($arr, $index + 1);
+		$sum += sumFrom1to100($start+1, $end);
 	}
 	return $sum;
 }
 
-$my_array=[1,2,3,4,5,6];
-echo sumElements($my_array)/count($my_array);
+echo sumFrom1to100();
 
