@@ -1,14 +1,13 @@
 <?php
 
-$dimension = 5; //размерность массива
-$arr = [];
-for ($i = 0; $i < $dimension; $i++)
+function arrayFill($element, $count) : array
 {
-	$element = null;
-	for ($j = 0; $j < $i + 1; $j++)
+	$arr=[];
+	for ($i = 0; $i < $count; $i++)
 	{
-		$element .= "x";
+		$arr[$i].=$element;
 	}
-	$arr[$i] = $element;
+	return $arr;
 }
+$arr=arrayFill('x',5);
 print_r($arr);
