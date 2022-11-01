@@ -1,8 +1,12 @@
 <?php
 
-$str='ahb acb adca aeb aeeb abba adcb axeb';
-$regexp='/a(dc|b[eb])a/';
-$matches = array();
+function cube($matches)
+{
+	$pow = pow($matches[0],3);
+	return $pow;
+}
 
-preg_match_all($regexp, $str, $matches);
-var_dump($matches);
+$str='a1b2c3';
+$regexp='/[0-9]/';
+
+echo preg_replace_callback($regexp, 'cube', $str);
