@@ -1,9 +1,16 @@
 <?php
 
-require_once('hello.php');
+session_start();
 
-$wordInString=str_word_count($_POST['text']);
-$cutString=trim($_POST['text']," ");
-$cutString=strlen($cutString);
-echo "Слов в строке: {$wordInString} <br>";
-echo "Символов в строке: {$cutString}";
+$_SESSION['USER']=[
+	'name'=>$_GET['name'],
+	'surname'=>$_GET['surname'],
+	'age'=>(int)$_GET['age'],
+];
+
+require_once('hello.php');
+?>
+
+<main>
+	<a href="read-session.php">Проверить сессию</a>
+</main>
