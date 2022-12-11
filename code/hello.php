@@ -9,13 +9,14 @@
 
 	<div class="my_form">
 		<form action="/" method="post">
-			<input type="text" name="email" placeholder="Write your email">
-			<input type="text" name="info" placeholder="text of advertisement">
-			<input type="text" name="head" placeholder="head of advertisement">
+			<input type="text" name="email" placeholder="email">
+			<input type="text" name="title" placeholder="title">
+			<input type="text" name="info" placeholder="info">
+			<input type="text" name="description" placeholder="description">
 			<select name="category">
-                <option value="books">books</option>
-                <option value="cars">cars</option>
-				<option value="clothes">clothes</option>
+				<option value="books">books</option>
+				<option value="cars">cars</option>
+
 			</select>
 			<button type="submit">Добавить</button>
 		</form>
