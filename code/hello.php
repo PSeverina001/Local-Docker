@@ -13,9 +13,9 @@
 			<input type="text" name="info" placeholder="text of advertisement">
 			<input type="text" name="head" placeholder="head of advertisement">
 			<select name="category">
-				<?php foreach ($category as $item): ?>
-				<option value="<?=$item ?>"><?=$item ?></option>
-				<?php endforeach; ?>
+                <option value="books">books</option>
+                <option value="cars">cars</option>
+				<option value="clothes">clothes</option>
 			</select>
 			<button type="submit">Добавить</button>
 		</form>

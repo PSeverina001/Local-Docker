@@ -13,3 +13,5 @@ services:
     image: php:7-fpm
     volumes:
       - ./code:/code
+      - ./vendor:/vendor
+      - ./.env:/.env

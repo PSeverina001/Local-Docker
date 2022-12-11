@@ -1,29 +1,24 @@
 <?php
 
-$dir = opendir('category');
-while($file = readdir($dir)) {
-	if (is_dir('category/'.$file) && $file != '.' && $file != '..') {
-		$category[]=$file;
-		$filepath='category/'.$file;
-		$files=scandir($filepath);
-		foreach ($files as $item){
-			if($item != "." && $item != ".."){
-				$path=$filepath.'/'.$item;
-				$data=fopen($path,"r");
-				$advert=[
-					'head'=>substr($item, 0, -4),
-					'info'=>fgets($data),
-					'category'=>$file,
-				];
-				$advertisement[]=$advert;
-			}
-		}
-	}
+require_once ('../vendor/autoload.php');
+require_once ('../.env/constants.php');
+//GET
+$client= new \Google\Client();
+$client->setAuthConfig('../.env/googleAuth.json');
+$client->addScope( SCOPE );
+$service = new Google_Service_Sheets( $client );
+$advertisement = $service->spreadsheets_values->get(TABLE_ID,RANGE)->getValues();
+
+//SET
+if ($_POST['email'] && $_POST['category'] && $_POST['head'] && $_POST['info'])
+{
+$data=[$_POST['email'], $_POST['head'] , $_POST['info'],$_POST['category']];
+    $valueRange = new \Google_Service_Sheets_ValueRange();
+    $valueRange->setValues([$data]);
+    $options = ['valueInputOption' => 'USER_ENTERED'];
+    $service->spreadsheets_values->append(TABLE_ID, RANGE,$valueRange,$options );
+    Header('Location: '.$_SERVER['PHP_SELF']);
 }
-
-$filename='category/'.$_POST['category'].'/'.$_POST['head'].'.txt';
-file_put_contents($filename, $_POST['info']);
-
 require_once('hello.php');
 ?>
 

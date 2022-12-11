@@ -3,6 +3,7 @@
 	"description": "description",
 	"minimum-stability": "stable",
 	"license": "proprietary",
+	"php": "^7.4",
 	"authors": [
 		{
 			"name": "Polina Severina",
@@ -10,5 +11,6 @@
 		}
 	],
 	"require": {
+		"google/apiclient": "^2.12"
 	}
 }
